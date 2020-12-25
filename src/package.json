@@ -2,22 +2,25 @@
   "name": "node-server-testing",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "test": "mocha '__tests__/*.js' --reporter mochawesome --recursive  --timeout 60000 --exit"
+    "test": "mocha '__tests__/*.test.js' --reporter mochawesome --recursive  --timeout 60000 --exit",
+    "run": "node ./src/index.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cors": "2.8.5",
     "express": "4.17.1",
-    "mochawesome": "6.1.1"
+    "mysql": "2.18.1",
+    "body-parser": "1.19.0",
+    "cors": "2.8.5"
   },
   "devDependencies": {
-    "chai": "4.2.0",
-    "chai-http": "4.3.0",
-    "mocha": "8.2.1",
-    "mochawesome-merge": "4.2.0"
+    "chai": "^4.2.0",
+    "mochawesome": "6.1.1",
+    "chai-http": "^4.3.0",
+    "mocha": "^8.2.1",
+    "sinon": "^9.2.1",
+    "node-serialize": "0.0.4"
   }
 }
