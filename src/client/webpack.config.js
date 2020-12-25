@@ -1,14 +1,23 @@
 
 const path = require("path");
-const HtmlWebpackPlugin= require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     entry: './src/index.js',
 
     output: {
-        path: path.join(__dirname,"/dist"),
+        path: path.join(__dirname, "/dist"),
         filename: "index_bundle.js",
     },
-    module:{
+    devServer: {
+        proxy: {
+            '/api/**': {
+                target: 'http://localhost:8080/',
+                secure: false,
+                changeOrigin: true
+            }
+        },
+    },
+    module: {
         rules: [
             {
                 test: /\.js$|\.jsx$/,
