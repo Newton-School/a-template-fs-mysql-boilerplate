@@ -1,13 +1,19 @@
-const express = require('express');
+const express = require("express");
+const app = express();
+const bodyParser = require("body-parser");
+const port = 8080;
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+const connection = require("./connector");
 const cors = require('cors');
-const bodyParser = require('body-parser')
+app.use(cors())
 
-const setupServer = () => {
-  const app = express();
-  app.listen(3000);
-  app.use(cors());
-  app.set('port', 8080 || 3000);
-  return app;
-}
 
-setupServer()
+
+
+
+
+
+
+app.listen(port);
+exports.app = app;
