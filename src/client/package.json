@@ -40,9 +40,7 @@
     "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
     "html-webpack-plugin": "^4.5.0",
-    "react-test-renderer": "^16.13.1",
     "webpack": "^4.44.2",
-    "webpack-dev-server": "^3.11.0",
-    "xml-js": "^1.6.11",
+    "webpack-dev-server": "^3.11.0"
     }
 }
