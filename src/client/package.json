@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cypress run --headless --reporter mochawesome",
+    "test": "cypress run  --reporter mochawesome",
     "start": "webpack-dev-server --mode development --watch --open --hot --port 3000",
     "build": "webpack --mode production"
   },
@@ -14,20 +14,6 @@
   "dependencies": {
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-   },
-  "jest": {
-    "moduleNameMapper": {
-      "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
-    },
-    "snapshotSerializers": [
-      "enzyme-to-json/serializer"
-    ],
-    "reporters": [
-      "default",
-      "jest-junit"
-    ]
-  },
-  "devDependencies": {
     "css-loader": "^4.3.0",
     "style-loader": "^1.2.1",
     "webpack-cli": "^3.3.12",
@@ -42,5 +28,18 @@
     "html-webpack-plugin": "^4.5.0",
     "webpack": "^4.44.2",
     "webpack-dev-server": "^3.11.0"
-    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|less|sass|scss)$": "<rootDir>/config/CSSStub.js"
+    },
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ],
+    "reporters": [
+      "default",
+      "jest-junit"
+    ]
+  },
+  "devDependencies": {}
 }
